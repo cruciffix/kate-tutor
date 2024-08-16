@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Главная</title>
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/media/index_media.css" />
+	</head>
+	<body>
+		<!-- HEADER -->
+		<%- include ('blocks/header') -%>
+		<!-- HEADER -->
+
+		<section class="section_1">
+			<div class="section_1__wrapper">
+				<div class="img">
+					<img src="/img/section1/kate.png" alt="" />
+				</div>
+
+				<div class="section_1__content">
+					<div class="section_1__content__wrapper">
+						<h1>Тут будет текст</h1>
+						<p>
+							Тут будет текст Тут будет текст Тут будет текст Тут будет текст
+							Тут будет текст Тут будет текст Тут будет текст Тут будет текст
+							Тут будет текст Тут будет текст
+						</p>
+
+						<!-- <div class="section_1__button"> -->
+						<a href="" class="section_1__button">Текст кнопки</a>
+						<!-- </div> -->
+					</div>
+					<!-- end section_1__content__wrapper -->
+				</div>
+				<!-- section_1__content END -->
+			</div>
+			<!-- wrapper END -->
+		</section>
+		<!-- section_1 END -->
+
+		<section class="section_2">
+			<div class="section_2__wrapper">
+				<% items[0].forEach(el => { %>
+
+				<div class="section_2__item_wrapper__container">
+					<div class="section_2__item_wrapper number_item">
+						<img src="<%- el.description_link%>" alt="" />
+						<hr />
+						<h3><%= el.headline%></h3>
+
+						<!-- END close__open -->
+					</div>
+
+					<div
+						class="section_2__item_wrapper section_2__content_description number_item"
+					>
+						<div class="close__open">
+							<div class="section_2__open">
+								<p class="section_2__description"><%- el.description%></p>
+								<span href="" class="roll_up<%- el.id %>">Свернуть</span>
+							</div>
+
+							<div class="section_2__close">
+								<span class="see__more section_2__<%-el.id%>"
+									>Посмотреть дальше</span
+								>
+							</div>
+						</div>
+
+						<!-- END close__open -->
+					</div>
+				</div>
+
+				<% }) %>
+			</div>
+		</section>
+		<!-- section_2 END -->
+
+		<section class="section_6" id="tgWpVk">
+			<div class="section_6__wrapper">
+				<div class="sections_headline">
+					<h3>Мои социальные сети</h3>
+					<span>Просто начните печатать сообщение, а после отправьте</span>
+				</div>
+				<!-- sections_headline END-->
+				<div class="section_6__wrapper-social">
+					<% section6.forEach((el, index) => { %>
+					<div
+						class="section_6__social-messengers <%if (index == 1) {%>wp<%} else if (index == 0) {%>vk<%} else {%>tg<%}%>"
+					>
+						<div class="section_6__messenger">
+							<a href="<%- el.link%>"><img src="<%- el.img%>" alt="" /></a>
+						</div>
+						<!-- section_6__messenger -->
+
+						<div class="section_6__soc-mes_content">
+							<div
+								class="section_6__content-header <%if(index == 0){%>icon_vk<%}%>"
+								style="background-color: #<%=el.color.split(' ') [0]%>"
+							>
+								<img
+									src="img/section_6_messengers/<%= el.name %>/back.png"
+									alt=""
+									class="section_6__icon_img"
+								/>
+
+								<div
+									class="section_6__content__ava-name-been"
+									id="section_6__content-<%= el.name%>"
+								>
+									<img src="/img/section_6_messengers/ava.png" alt="" />
+									<div class="section_6__content-name-been">
+										<span class="section_6__content__name">Екатерина</span>
+										<div
+											class="section_6__content__been"
+											style="
+										<% if (el.name == 'vk') { %>
+											color: #8F8F8F;
+											<%} else {%>
+												color: #A8CAE3;
+												<%}%>
+										"
+										>
+											<%if (el.name != "wp") {%> <%if (el.name == "tg") {%>
+											<span>был(а) недавно</span>
+											<%} else {%>
+											<span>была в сети в 18.30</span>
+											<%}%> <%}%>
+										</div>
+									</div>
+								</div>
+
+								<div class="section_6__wrapper-icon">
+									<%if (el.name == "wp") {%>
+									<img src="img/section_6_messengers/wp/video.png" alt="" />
+									<%}%>
+
+									<img
+										src="img/section_6_messengers/<%= el.name %>/call.png"
+										alt=""
+										class="section_6__call"
+									/>
+
+									<img
+										src="img/section_6_messengers/<%= el.name %>/settings.png"
+										alt=""
+										class="section_6__img-setting"
+									/>
+								</div>
+							</div>
+							<!-- section_6__content-header ENd -->
+
+							<div class="section_6__content-body">
+								<% for (let i = 0; i < 10; i++) { %> <% if
+								(el.kate.split('|').length > i && el.student.split("|").length >
+								i) {%>
+								<div class="section_6__dialog-wrapper">
+									<div class="section_6__kate section_6__kate_<%= el.name %>">
+										<%=el.kate.split("|")[i]%>
+										<span class="section_6__time-ok__kate">
+											<div>18.22</div>
+										</span>
+									</div>
+
+									<div
+										class="section_6__student section_6__student_<%= el.name %>"
+									>
+										<div>
+											<%=el.student.split("|")[i]%>
+
+											<span class="section_6__time-ok__student">
+												<div>
+													18.24
+													<img src="/img/section_6_messengers/ok.png" alt="" />
+												</div>
+											</span>
+										</div>
+									</div>
+								</div>
+								<%}%> <%}%>
+							</div>
+
+							<div class="section_6__content-footer">
+								<div class="section_6__footer-wrapper">
+									<div class="section_6_footer-icons-textArea">
+										<div class="section_6__icons-left">
+											<img
+												src="/img/section_6_messengers/<%= el.name%>/smile.png"
+												alt=""
+											/>
+
+											<% if (el.name == "wp") { %>
+											<img
+												src="/img/section_6_messengers/<%= el.name%>/plus.png"
+												alt=""
+											/>
+
+											<%}%>
+										</div>
+										<!-- section_6__icons-left END -->
+
+										<input type="text" placeholder="Написать сообщение" />
+
+										<% if (el.name == "tg") { %>
+										<div class="section_6__icons-right">
+											<img
+												src="/img/section_6_messengers/<%= el.name%>/attach.png"
+												alt=""
+											/>
+										</div>
+										<%}%>
+
+										<!-- section_6__icons-right END -->
+									</div>
+									<!-- section_6_footer-icons-textArea END -->
+
+									<div class="section_6__send-message">
+										<a href="">
+											<img
+												src="img/section_6_messengers/<%= el.name%>/send.png"
+												alt=""
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- section_6__soc-mes_content END -->
+					</div>
+					<!-- section_6__social-messengers END -->
+					<%})%>
+				</div>
+				<!-- section_6__wrapper-social END  -->
+			</div>
+		</section>
+		<!-- section_6 END -->
+
+		<section class="section_8" id="reviews">
+			<div class="section_8__bg">
+				<div class="section_8__wrapper">
+					<div class="sections_headline">
+						<h3>Об уроках</h3>
+						<span>Прочтите, и Вы поймете, как будете учиться</span>
+					</div>
+					<div class="section_8__carousel">
+						<!-- CAROUSEL-->
+						<% arrForRenderFeedback.forEach(item => {%>
+
+						<div
+							class="section_8__place <% if (item == 0) {%>avito<%} else {%>profi<%}%>"
+						>
+							<!-- GALLEREY  -->
+							<div
+								class="section_8__img-btn <%if (item != 0) { %>section_8__first<%}%>"
+							>
+								<%if (item == 0) {%>
+								<img src="/img/section_8/avito.png" alt="" />
+								<%} else {%>
+								<img src="/img/section_8/profi.png" alt="" />
+
+								<%}%>
+								<a href="https://colorscheme.ru/">Перейти</a>
+							</div>
+							<!-- section_8__img-btn end -->
+
+							<div
+								class="section_8__divs <%if (item != 0) { %>section_8__middle<%}%>"
+							>
+								<%for (let i = 1; i <= 4; i ++) {%>
+								<div
+									class="section_8__div <%if (item == 0) {%> section_8__div-<%= i%> <%}%>"
+								></div>
+
+								<%}%>
+							</div>
+
+							<div
+								class="section_8__rating-slider <%if (item != 0) { %>section_8__last<%}%>"
+							>
+								<!-- UL -->
+								<div class="section_8__rainting-content">
+									<% if (item == 0) {%> <% section8.forEach(el => { %> <%if
+									(el.name == "avito") { %>
+									<div
+										class="section_8__wrapper-content section_8__wrapper-content-avito"
+									>
+										<div class="section_8__content-headline">
+											<img class="section_8__ava" src="/img/section_8/ava.png" alt="" />
+
+											<div class="section_8__headline-rating">
+												<span>Екатерина Убейкина</span>
+
+												<div>
+													<% for (let i = 0; i < el.rating; i++) {%>
+													<img src="img/section_8/star.png" alt="" />
+													<%}%>
+												</div>
+											</div>
+											<!-- section_8__headline-rating" ENd -->
+										</div>
+										<!-- section_8__content-headline END -->
+
+										<div class="section_8__body">
+											<p><%= el.body%></p>
+										</div>
+									</div>
+									<%} %> <%}) %> <%} else {%> <% section8.forEach(el => { %>
+									<%if (el.name == "profi") { %>
+									<div
+										class="section_8__wrapper-content section_8__wrapper-content-profi"
+									>
+										<div class="section_8__content-headline">
+											<img src="/img/section_8/ava.png" alt="" />
+
+											<div class="section_8__headline-rating">
+												<span>Екатерина Убейкина</span>
+
+												<div>
+													<% for (let i = 0; i < el.rating; i++) {%>
+													<img src="img/section_8/star.png" alt="" />
+													<%}%>
+												</div>
+											</div>
+											<!-- section_8__headline-rating" ENd -->
+										</div>
+										<!-- section_8__content-headline END -->
+
+										<div class="section_8__body">
+											<p><%= el.body%></p>
+										</div>
+									</div>
+									<%} %> <%}) %> <%}%>
+								</div>
+
+								<div class="section_8__wrappper-slider">
+									<div class="section_8__horizontal-line">
+										<!-- slider -->
+										<div class="section_8__circle" id=""></div>
+										<!-- thumb -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<%})%>
+						<!-- section_8__slider end -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- section_8 END -->
+
+		<section class="section_5">
+			<div class="section_5__wrapper">
+				<h3>Заголовок - попрошайка чтоб человек связался с тобой</h3>
+				<div>
+					<p class="section_5__dscrptn-btn">
+						Ну тут уже будет какой-то коротенький текст вот Ну тут уже будет
+						какой-то ё текст вот текст вот текст вот текст вот текст вот текст
+						вот текст вот текст вот тексттекст вот
+					</p>
+					<div class="section_5__btn">
+						<a href="#">Клик сюда</a>
+					</div>
+				</div>
+			</div>
+			<!-- section_5__wrapper END -->
+		</section>
+		<!-- section_5 END -->
+
+		<section class="section_3">
+			<div class="section_3__wrapper">
+				<div class="sections_headline">
+					<h3>Об уроках</h3>
+					<span>Прочтите, и Вы поймете, как будете учиться</span>
+				</div>
+				<!-- sections_headline END -->
+				<div class="section_3__content">
+					<div class="section_3__column-1">
+						<div class="section_3__column-1__item section_3__column-1__item-1">
+							<div class="section_3__item__text">
+								<span>Будет текст</span>
+								<p>
+									Тут будет текст Тут будет текст Тут будет Тут будет текст Тут
+									будет текс
+								</p>
+							</div>
+						</div>
+						<!-- END section_3__column-1__item -->
+
+						<div class="section_3__column-1__item section_3__column-1__item-2">
+							<div class="section_3__item__text">
+								<span>Будет текст</span>
+								<p>
+									Тут будет текст Тут будет текст Тут будет Тут будет текст Тут
+									будет текс Тут будет текст Тут будет текст Тут будет
+								</p>
+							</div>
+						</div>
+						<!-- END section_3__column-1__item -->
+					</div>
+					<!-- section_3__column END -->
+
+					<div class="section_3__column-2">
+						<div class="section_3__column-1__item section_3__column-2__item-1">
+							<div class="section_3__item__text">
+								<span>Будет текст</span>
+								<p>
+									Тут будет текст Тут будет текст Тут будет Тут будет текст Тут
+									будет тексТут будет текст Тут будет текст Тут будет Тут будет
+									текст Тут будет текс Тут будет
+								</p>
+							</div>
+						</div>
+						<!-- END section_3__column-1__item -->
+
+						<!-- END section_3__column-1__item -->
+					</div>
+					<!-- section_3__column END -->
+
+					<div class="section_3__column-3">
+						<div class="section_3__column-1__item section_3__column-3__item-1">
+							<div class="section_3__item__text">
+								<span>Будет текст</span>
+								<p>Тут будет текст Тут буд текст Тут буд текст Тут буд текст</p>
+							</div>
+						</div>
+						<!-- END section_3__column-1__item -->
+
+						<div class="section_3__column-1__item section_3__column-3__item-2">
+							<div class="section_3__item__text">
+								<span>Будет текст</span>
+								<p>
+									Тут будет текст Тут будет текст Тут будет Тут будет текст Тут
+									будет текс Тут будет текст Тут будет текст Тут будет
+								</p>
+							</div>
+						</div>
+						<!-- END section_3__column-1__item -->
+					</div>
+					<!-- section_3__column END -->
+				</div>
+				<!-- section_3__content END -->
+			</div>
+
+			<!-- section_3__wrapper END -->
+		</section>
+		<!-- section_3 END -->
+
+		<section class="section_4">
+			<!-- carousel  -->
+			<div class="section_4__wrapper">
+				<!-- gallery  -->
+				<div class="sections_headline">
+					<h3>Об уроках</h3>
+					<span>Прочтите, и Вы поймете, как будете учиться</span>
+				</div>
+				<!-- sections_headline END -->
+
+				<div class="section_4__buttons">
+					<svg
+						class="section_4__up prev"
+						version="1.1"
+						id="Capa_1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						x="0px"
+						y="0px"
+						viewBox="0 0 471.2 471.2"
+						style="enable-background: new 0 0 471.2 471.2"
+						xml:space="preserve"
+					>
+						<g>
+							<g>
+								<path
+									d="M396.7,0H74.5C33.4,0,0,33.4,0,74.5v322.2c0,41.1,33.4,74.5,74.5,74.5h322.2c41.1,0,74.5-33.4,74.5-74.5V74.5 C471.2,33.5,437.7,0,396.7,0z M444.2,396.7c0,26.2-21.3,47.5-47.5,47.5H74.5c-26.2,0-47.5-21.3-47.5-47.5V74.5 C27,48.3,48.3,27,74.5,27h322.2c26.2,0,47.5,21.3,47.5,47.5V396.7z"
+								/>
+								<path
+									d="M245.1,117.1c-5.3-5.3-13.8-5.3-19.1,0l-70.4,70.5c-5.3,5.3-5.3,13.8,0,19.1s13.8,5.3,19.1,0l47.5-47.5v185.4 c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5V159.2l47.4,47.4c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1 L245.1,117.1z"
+								/>
+							</g>
+						</g>
+					</svg>
+					<!-- OPEN -->
+					<svg
+						class="section_4__down next"
+						version="1.1"
+						id="Capa_1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						x="0px"
+						y="0px"
+						viewBox="0 0 471.2 471.2"
+						style="enable-background: new 0 0 471.2 471.2"
+						xml:space="preserve"
+					>
+						<g>
+							<g>
+								<path
+									d="M396.7,0H74.5C33.4,0,0,33.4,0,74.5v322.2c0,41.1,33.4,74.5,74.5,74.5h322.2c41.1,0,74.5-33.4,74.5-74.5V74.5 C471.2,33.5,437.7,0,396.7,0z M444.2,396.7c0,26.2-21.3,47.5-47.5,47.5H74.5c-26.2,0-47.5-21.3-47.5-47.5V74.5 C27,48.3,48.3,27,74.5,27h322.2c26.2,0,47.5,21.3,47.5,47.5V396.7z"
+								/>
+								<path
+									d="M296.6,264.6l-47.5,47.5V126.6c0-7.5-6-13.5-13.5-13.5s-13.5,6-13.5,13.5V312l-47.5-47.4c-5.3-5.3-13.8-5.3-19.1,0 s-5.3,13.8,0,19.1l70.5,70.5c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l70.6-70.6c5.3-5.3,5.3-13.8,0-19.1 C310.4,259.3,301.8,259.3,296.6,264.6z"
+								/>
+							</g>
+						</g>
+					</svg>
+					<!-- CLOSE -->
+				</div>
+
+				<div class="section_4__content-wrapper">
+					<div class="section_4__content">
+						<!-- ul -->
+						<%section4[0].forEach(el => {%>
+						<div class="section_4__content-container">
+							<div class="section_4__wrapper-content-id">
+								<div class="section_4_wrapper">
+									<div
+										class="section_4__content-bg"
+										style="background-color: #<%-el.color %>"
+									>
+										<span class="section_4__content-id">0<%-el.id%></span>
+									</div>
+								</div>
+
+								<span class="section_4__headline"><%-el.headline%></span>
+							</div>
+							<div class="section_4__description">
+								<p><%-el.description%></p>
+							</div>
+						</div>
+						<!-- section_4__content-container end -->
+						<%})%>
+					</div>
+					<!-- section_4__content end -->
+				</div>
+				<!-- section_4__content-wrapper end -->
+			</div>
+			<!-- section_4__wrapper end -->
+		</section>
+		<!-- section_4 END -->
+
+		<section class="section_7">
+			<div class="section_7__bg">
+				<div class="section_7__wrapper">
+					<div class="sections_headline">
+						<h3>Какой-то заголовок</h3>
+						<span>Типо крутая надпись тут вот</span>
+					</div>
+					<div class="section_7__wrapper-top">
+						<% section7.forEach(el => {%> <% if (el.id == 1 || el.id == 2) {%>
+						<div class="section_7__wrapper-item">
+							<div class="section_7__item-text">
+								<h3><%= el.headline%></h3>
+								<p><%= el.p%></p>
+							</div>
+
+							<img src="/img/section_7/image<%= el.id%>.png" alt="" />
+						</div>
+						<%}%> <% })%>
+						<!-- section_7__wrapper-item END -->
+					</div>
+
+					<div class="section_7__wrapper-down">
+						<% section7.forEach(el => {%> <% if (el.id == 3 || el.id == 4) {%>
+						<div class="section_7__wrapper-item">
+							<div class="section_7__item-text">
+								<h3><%= el.headline%></h3>
+								<p><%= el.p%></p>
+							</div>
+
+							<img src="/img/section_7/image<%= el.id%>.png" alt="" />
+						</div>
+						<%}%> <% })%>
+						<!-- section_7__wrapper-item END -->
+					</div>
+					<!-- section_7__wrapper-down END -->
+				</div>
+				<!-- section_7__wrapper END -->
+			</div>
+			<!-- section_7__bg ENd -->
+		</section>
+		<!-- section_7 END -->
+
+		<!-- FOOTER -->
+		<%- include ('blocks/footer') -%>
+		<!-- FOOTER -->
+		<script>
+			const section2Items = <%- JSON.stringify(items[0]) %>;
+			const section6 = <%- JSON.stringify(section6) %>;
+		</script>
+		<script src="/scripts/main.js"></script>
+	</body>
+</html>

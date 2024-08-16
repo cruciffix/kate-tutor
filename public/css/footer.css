@@ -1,0 +1,38 @@
+footer.footer {
+	background-color: #eee4ff;
+	padding: 35px 0;
+
+	text-align: center;
+}
+
+div.wrapper__messengers a {
+	text-decoration: none;
+}
+
+div.footer__wrapper .call_me {
+	font-size: 21px;
+}
+
+div.wrapper__messengers img {
+	width: 50px;
+
+	margin: 20px 10px 10px 10px;
+}
+
+a.privacy_policy {
+	display: inline-block;
+
+	margin: 20px 0;
+
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+}
+
+p.teacher__name {
+	font-size: 22px;
+}
+
+div.footer__date {
+	font-size: 18px;
+}

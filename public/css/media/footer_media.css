@@ -1,0 +1,134 @@
+@media screen and (min-width: 1801px) {
+	div.footer__wrapper .call_me {
+		margin: 30px 0;
+		font-size: 35px;
+	}
+
+	div.wrapper__messengers img {
+		width: 75px;
+		margin: 20px;
+	}
+
+	a.privacy_policy {
+		margin: 30px 0;
+
+		font-size: 32px;
+	}
+
+	p.teacher__name {
+		margin: 20px 0;
+		font-size: 40px;
+	}
+
+	div.footer__date {
+		font-size: 33px;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	div.footer__wrapper .call_me {
+		margin: 28px 0;
+		font-size: 40px;
+	}
+
+	div.wrapper__messengers img {
+		width: 90px;
+		margin: 20px;
+	}
+
+	a.privacy_policy {
+		margin: 30px 0;
+
+		font-size: 32px;
+	}
+
+	p.teacher__name {
+		margin: 23px 0;
+
+		font-size: 40px;
+	}
+
+	div.footer__date {
+		font-size: 33px;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	div.footer__wrapper .call_me {
+		margin: 20px 0;
+
+		font-size: 40px;
+	}
+
+	div.wrapper__messengers img {
+		width: 90px;
+		margin: 20px;
+	}
+
+	a.privacy_policy {
+		margin: 30px 0;
+
+		font-size: 32px;
+	}
+
+	p.teacher__name {
+		margin: 20px 0;
+
+		font-size: 40px;
+	}
+
+	div.footer__date {
+		font-size: 33px;
+	}
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+	div.footer__wrapper .call_me {
+		margin-bottom: 17px;
+
+		font-size: 32px;
+	}
+
+	div.wrapper__messengers img {
+		width: 80px;
+		margin: 20px;
+	}
+
+	a.privacy_policy {
+		font-size: 25px;
+	}
+
+	p.teacher__name {
+		margin: 17px 0;
+
+		font-size: 32px;
+	}
+
+	div.footer__date {
+		font-size: 32px;
+	}
+}
+/* Для мобильных телефонов */
+@media screen and (min-width: 320px) and (max-width: 576px) {
+	div.footer__wrapper .call_me {
+		font-size: 25px;
+	}
+
+	div.wrapper__messengers img {
+		width: 65px;
+	}
+
+	a.privacy_policy {
+		font-size: 20px;
+	}
+
+	p.teacher__name {
+		margin: 10px 0;
+
+		font-size: 27px;
+	}
+
+	div.footer__date {
+		font-size: 26px;
+	}
+}

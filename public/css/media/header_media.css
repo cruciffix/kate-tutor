@@ -1,0 +1,515 @@
+@media screen and (min-width: 1801px) {
+	/* HEADLINE */
+	div.sections_headline {
+		margin: 30px 8px 45px 8px;
+		padding: 30px 40px;
+
+		border-radius: 30px;
+	}
+
+	div.sections_headline span {
+		font-size: 25px;
+	}
+
+	div.sections_headline h3 {
+		font-size: 44px;
+	}
+	/* HEADLINE */
+
+	/* HEADER */
+	header .logo {
+		margin: 0;
+
+		width: 200px;
+		height: 87px;
+
+		text-align: center;
+	}
+
+	.logo span:last-child {
+		font-size: 32px;
+	}
+
+	.logo span:first-child {
+		font-size: 47px;
+	}
+
+	li.menu__item a {
+		font-size: 23px;
+	}
+
+	a.consult {
+		font-size: 23px;
+		padding: 17px 25px 19px 25px;
+	}
+
+	/* MODAL */
+	div.modal__messenger-logo img {
+		width: 70px;
+	}
+	div.modal__messenger-logo div {
+		font-size: 27px;
+
+		padding: 10px 20px;
+
+		border-radius: 20px;
+	}
+
+	div.modal__messenger input {
+		width: 350px;
+		height: 60px;
+
+		font-size: 22px;
+	}
+
+	div.modal__messenger a {
+		font-size: 25px;
+
+		padding: 14px 24px;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	/* HEADLINE */
+	div.sections_headline {
+		margin: 30px 8px 45px 8px;
+		padding: 10px 18px;
+
+		border-radius: 12px;
+	}
+
+	div.sections_headline span {
+		font-size: 15px;
+	}
+
+	div.sections_headline h3 {
+		font-size: 21px;
+	}
+	/* HEADLINE */
+	header.header {
+		padding: 5px 0;
+	}
+	header .logo {
+		padding: 10px 20px 7px 20px;
+		margin: 0;
+	}
+	.logo span:last-child {
+		font-size: 20px;
+	}
+	.logo span:first-child {
+		font-size: 30px;
+	}
+
+	li.menu__item a {
+		font-size: 17px;
+	}
+
+	a.consult {
+		font-size: 18px;
+	}
+
+	/* MODAL */
+	div.modal__wrapper p {
+		width: 70%;
+
+		font-size: 25px;
+	}
+	div.modal {
+		padding-top: 80px;
+	}
+
+	div.modal__messenger input {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	/* HEADLINE */
+	div.sections_headline {
+		margin: 30px 8px 45px 8px;
+		padding: 12px 20px;
+
+		border-radius: 12px;
+	}
+
+	div.sections_headline span {
+		font-size: 16px;
+	}
+
+	div.sections_headline h3 {
+		font-size: 22px;
+	}
+	/* HEADLINE */
+
+	/* HEADER */
+	header.header {
+		position: fixed;
+		z-index: 1001;
+		top: 0;
+
+		width: 550px;
+		height: 100%;
+
+		margin-left: -600px;
+
+		transition: all 2s;
+	}
+
+	header .logo {
+		margin: 0 0 30px 0;
+		padding: 25px 55px 40px 55px;
+
+		font-size: 20px;
+	}
+	.logo span:last-child {
+		font-size: 30px;
+	}
+	.logo span:first-child {
+		font-size: 40px;
+	}
+
+	a.consult {
+		margin: 30px 0 0 0;
+
+		font-size: 19px;
+	}
+
+	div.navigation__menu ul {
+		flex-direction: column;
+		align-items: center;
+
+		padding: 0;
+	}
+
+	div.navigation__menu ul li {
+		margin: 0 0 20px 0;
+	}
+	header.header .container-burger {
+		display: block;
+		position: fixed;
+		top: 30px;
+		left: 20px;
+
+		padding: 10px;
+
+		background-color: rgba(255, 255, 255, 0.7);
+
+		border-radius: 4px;
+	}
+
+	header .container {
+		/* display: none; */
+		display: flex;
+		flex-direction: column;
+	}
+	div.close,
+	div.menu {
+		height: 15px;
+	}
+
+	div.container-burger svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	li.menu__item a {
+		font-size: 22px;
+	}
+
+	/* MODAL */
+
+	div.modal {
+		width: 400px;
+		height: 270px;
+	}
+
+	div.modal__wrapper p {
+		width: 80%;
+
+		font-size: 18px;
+	}
+
+	div.modal__messenger-logo {
+		margin: 50px 0 0 0;
+	}
+
+	div.modal__messenger-logo img {
+		width: 45px;
+	}
+
+	div.modal__messenger-logo div {
+		width: 120px;
+
+		font-size: 17px;
+		font-weight: 500;
+	}
+
+	div.modal__messenger input {
+		margin: 8px 0;
+
+		width: 200px;
+		height: 28px;
+
+		font-size: 14px;
+	}
+
+	div.modal__messenger a {
+		padding: 8px 13px;
+
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+	header.header {
+		position: fixed;
+		z-index: 1001;
+
+		width: 400px;
+		height: 100%;
+
+		margin-left: -425px;
+
+		transition: all 2s;
+	}
+
+	header .logo {
+		margin: 0 0 30px 0;
+		padding: 10px;
+
+		font-size: 26px;
+	}
+
+	a.consult {
+		margin: 30px 0 0 0;
+
+		font-size: 16px;
+	}
+
+	div.navigation__menu ul {
+		flex-direction: column;
+		align-items: center;
+
+		padding: 0;
+	}
+
+	div.navigation__menu ul li {
+		margin: 0 0 20px 0;
+	}
+	header.header .container-burger {
+		display: block;
+		position: fixed;
+		top: 30px;
+		left: 20px;
+
+		padding: 10px;
+
+		background-color: rgba(255, 255, 255, 0.7);
+
+		border-radius: 4px;
+	}
+
+	header .container {
+		/* display: none; */
+		display: flex;
+		flex-direction: column;
+	}
+	div.close,
+	div.menu {
+		height: 15px;
+	}
+
+	div.container-burger svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	/* MODAL */
+
+	div.modal {
+		width: 400px;
+		height: 270px;
+	}
+
+	div.modal__wrapper p {
+		width: 80%;
+
+		font-size: 18px;
+	}
+
+	div.modal__messenger-logo {
+		margin: 50px 0 0 0;
+	}
+
+	div.modal__messenger-logo img {
+		width: 45px;
+	}
+
+	div.modal__messenger-logo div {
+		width: 120px;
+
+		font-size: 17px;
+		font-weight: 500;
+	}
+
+	div.modal__messenger input {
+		margin: 8px 0;
+
+		width: 200px;
+		height: 28px;
+
+		font-size: 14px;
+	}
+
+	div.modal__messenger a {
+		padding: 8px 13px;
+
+		font-size: 15px;
+	}
+
+	/* INDEX */
+}
+/* Для мобильных телефонов */
+@media screen and (min-width: 320px) and (max-width: 576px) {
+	/* HEADLINE */
+	div.sections_headline {
+		text-align: center;
+
+		margin: 30px 8px 45px 8px;
+		padding: 10px 20px;
+	}
+
+	div.sections_headline span {
+		font-size: 17px;
+	}
+
+	div.sections_headline h3 {
+		font-size: 22px;
+	}
+	/* HEADLINE */
+
+	/* =========================================================== */
+	/* HEADER START */
+	/* =========================================================== */
+	header .container {
+		/* display: none; */
+		display: flex;
+		flex-direction: column;
+	}
+
+	div.navigation__menu ul {
+		flex-direction: column;
+		text-align: center;
+
+		padding: 0;
+	}
+
+	header.header {
+		position: fixed;
+		z-index: 1001;
+
+		width: 300px;
+		height: 100%;
+
+		margin-left: -325px;
+
+		transition: all 2s;
+	}
+	ul li.menu__item {
+		margin: 0 0 15px 0;
+	}
+
+	header .logo {
+		margin: 0 0 50px 0;
+	}
+
+	.marginLeftClass {
+		/* margin-left: 30px; */
+	}
+
+	header.header .container-burger {
+		display: block;
+		position: fixed;
+		top: 30px;
+		left: 20px;
+
+		padding: 10px;
+
+		background-color: rgba(255, 255, 255, 0.7);
+
+		border-radius: 4px;
+	}
+
+	div.container-burger .close {
+		/* display: none; */
+	}
+
+	div.container-burger div {
+		width: 20px;
+		height: 20px;
+	}
+
+	li.menu__item a {
+		font-size: 17px;
+		font-weight: 500;
+	}
+
+	a.consult {
+		margin: 50px 0 0 0;
+	}
+
+	div.modal {
+		width: 300px;
+		height: 500px;
+
+		margin: 0 auto;
+		padding: 50px 20px 0px 20px;
+	}
+
+	div.modal__wrapper p {
+		width: 100%;
+
+		font-size: 23px;
+	}
+
+	div.modal__messenger-logo {
+		margin: 100px 0 0 0;
+	}
+
+	div.modal__messenger input {
+		width: 80%;
+		font-size: 14px;
+	}
+
+	div.modal__messenger a {
+		font-size: 14px;
+	}
+	/* =========================================================== */
+	/* HEADER END */
+	/* =========================================================== */
+
+	/*  
+
+
+
+
+
+
+
+	
+	*/
+
+	/* =========================================================== */
+	/* INDEX START */
+	/* =========================================================== */
+
+	div.section_7__wrapper-down,
+	div.section_7__wrapper-top,
+	section.section_3 div.section_3__content {
+		display: block;
+	}
+
+	/* =========================================================== */
+	/* INDEX END */
+	/* =========================================================== */
+}

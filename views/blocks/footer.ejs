@@ -1,0 +1,19 @@
+<footer class="footer">
+	<div class="footer__wrapper">
+		<p class="call_me">Можете связаться со мной, написав в</p>
+
+		<div class="wrapper__messengers">
+			<% section6.forEach(el => {%>
+			<a href="<%= el.link%>">
+				<img src="<%= el.img%>" alt="" />
+			</a>
+			<%})%>
+		</div>
+
+		<a href="" class="privacy_policy">Политика конфиденциальности</a>
+
+		<p class="teacher__name">© Репетитор по химии Екатерина Владимировна</p>
+
+		<div class="footer__date"><%= new Date().getFullYear()%></div>
+	</div>
+</footer>

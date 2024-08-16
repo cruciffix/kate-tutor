@@ -1,0 +1,22 @@
+{
+	"name": "kate-tutor",
+	"version": "2.0.0",
+	"description": "this is project",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "kate-tutor"
+	},
+	"author": "Lekcey",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.20.2",
+		"ejs": "^3.1.10",
+		"express": "^4.19.2",
+		"mysql2": "^3.11.0"
+	}
+}

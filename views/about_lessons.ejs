@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Об уроках</title>
+		<link rel="stylesheet" href="/css/about_us.css" />
+		<link rel="stylesheet" href="/css/media/about-lessons_media.css" />
+	</head>
+	<body>
+		<%- include ('blocks/header') %>
+
+		<section class="section_1">
+			<div class="section_1__wrapper">
+				<div class="section_1__column-1">
+					<div class="section_1__carousel-wrapper">
+						<div class="section_1__carousel">
+							<% for (let i = 1; i <= 7; i++) {%>
+
+							<img src="/img/about-lessons_section1/<%= i %>.png" alt="" />
+							<%}%>
+						</div>
+						<!-- END section_1__carousel -->
+						<div class="section_1__circles">
+							<%for (let i = 1; i <= 6; i++) {%>
+							<div class=""></div>
+							<%}%>
+						</div>
+					</div>
+
+					<div class="tumblers">
+						<div class="back"></div>
+						<div class="go"></div>
+					</div>
+					<!-- END section_1__carousel-wrapper -->
+				</div>
+
+				<!-- END section_1__column-1 -->
+
+				<div class="section_1__column-2">
+					<div class="section_1__text-wrapper">
+						<div class="section_1__text-content">
+							<div class="section_1__text-headline">
+								<h1>Об уроках</h1>
+								<span>Прочтите, и Вы поймете, как будете учиться</span>
+							</div>
+							<!-- END section_1__text-headline -->
+
+							<p>
+								Прочтите, и Вы поймете, как будете учиться Прочтите, и Вы
+								поймете, как будете учитьсяПрочтите, и Вы поймете, как будете
+								учиться Прочтите, и Вы поймете, как будете учиться\ Прочтите, и
+								Вы поймете, как будете учиться
+							</p>
+							<a href="" class="section1__btn">Текст кнопки</a>
+						</div>
+						<!-- END section_1__text-content -->
+					</div>
+					<!-- END section_1__text-wrapper -->
+				</div>
+				<!-- END section_1__column-2 -->
+			</div>
+
+			<!-- END section_1__wrapper -->
+		</section>
+		<!-- section_1 END -->
+
+		<section class="section_2">
+			<div class="section_8__wrappper-slider">
+				<div class="horizontalLine">
+					<!-- slider -->
+					<div class="circle" id=""></div>
+					<!-- thumb -->
+				</div>
+			</div>
+
+			<div class="section_2__wrapper">
+				<div class="section_2__block-1">
+					<% for (let i = 1; i <= 2; i++) {%>
+					<div class="section_2__block-1__row-<%=i%>">
+						<% if (i == 1) {%>
+						<div class="section_2__block-1__row-1__headline">
+							<span>Тут будет заголовок описывающий суть этого блока</span>
+							<h2>Какая-то красивый текст уааа оч жесткий смысл</h2>
+						</div>
+						<!-- section_2__block-1__row-1__headline END -->
+						<%}%>
+
+						<div
+							class="section_2__block-1__row-1__content <%if (i == 1) {%> section_2__width100 <%} else {%> <%}%>"
+						>
+							<%if (i == 1) {%> <% for (let j = 1; j <= 2; j++) {%>
+							<div
+								class="section_2__block-1__row-1__content__wrapper <%if (j == 2) {%> section_2__D96FF5 <%} else {%> section_2__44D9FE <%}%>"
+							>
+								<img src="/img/section_2__item/item<%=i%>.png" alt="" />
+								<div>
+									<span>Прочтите, и Вы поймете</span>
+									<p>
+										Прочтите, и Вы поймете и Вы пой и Вы пойметеи Вы пойметеи Вы
+										поймете
+									</p>
+								</div>
+							</div>
+
+							<!-- section_2__block-1__row-1__content__wrapper END -->
+							<%}%> <%} else {%> <% for (let j = 2; j <= 5; j++) {%>
+							<div
+								class="section_2__block-1__row-1__content__wrapper <%if (j == 2) {%> section_2__D430FF <%} else if (j == 3) {%> section_2__1170FF <%} else if (j == 4) {%> section_2__AE00DD <%} else {%> section_2__CE019F <%}%>"
+							>
+								<img src="/img/section_2__item/item<%=i%>.png" alt="" />
+								<div>
+									<span>Прочтите, и Вы поймете</span>
+									<p>
+										Прочтите, и Вы поймете и Вы пой и Вы пойметеи Вы пойметеи Вы
+										поймете
+									</p>
+								</div>
+							</div>
+							<%}%> <%}%>
+
+							<!-- section_2__block-1__row-1__content__wrapper END -->
+						</div>
+						<!-- section_2__block-1__row-1__content END -->
+					</div>
+					<%}%>
+
+					<!-- section_2__block-1__row-1 -->
+				</div>
+				<!-- section_2__block-1 END -->
+
+				<div class="section_2__block-2">
+					<%for (let i = 1; i <= 2; i++) {%>
+					<div class="section_2__block-2__row-<%=i%>">
+						<div class="section_2__block-2__row-<%=i%>__content">
+							<%if (i == 1) {%> <%for (let i = 1; i <= 3; i++) {%>
+							<div class="section_2__block-2__row-1__content__wrapper">
+								<%if (i == 1) {%>
+								<span>Прочтите и вы поймете 1</span>
+								<%} else if (i == 2) {%>
+								<span>Прочтите и вы поймете 2</span>
+								<%} else {%>
+								<span>Прочтите и вы поймете 2</span>
+								<%}%>
+								<img src="/img/about-lessons_section2/<%=i%>.png" alt="" />
+							</div>
+							<!-- section_2__block-2__row-1__content__wrapper ENd -->
+							<%}%> <%} else {%> <%for (let i = 1; i <= 4; i++) {%>
+							<div class="section_2__block-2__row-2__content__wrapper">
+								<p>Прочтите, и Вы поймете</p>
+							</div>
+							<%}%> <%}%>
+						</div>
+					</div>
+					<%}%>
+				</div>
+				<!-- section_2__block-2 END -->
+			</div>
+			<!-- section_2__wrapper END -->
+		</section>
+		<!-- section_2 END -->
+
+		<section class="section_3">
+			<div class="section_3__wrapper">
+				<%for(let i = 1; i <= 2; i++) {%>
+				<div class="section_3__row_<%=i%>">
+					<%if (i == 1) {%>
+					<div class="section_3__wrpper-time_lessons_teacher">
+						<%for (let j = 1; j <= 3; j++) {%>
+						<div class="time_lessons_teacher__block">
+							<h3 class="time_lessons_teacher__block_h3-<%=i%>">0</h3>
+							<span class="time_lessons_teacher__block_span-<%=j%>"
+								>Занятий</span
+							>
+							<p class="time_lessons_teacher__block_p-<%=j%>">
+								У меня оче нь бол ьшой опfbыт какsvsrvsrb капец! У меняb очsrvнь
+								erebg большой опыт как srкапец!fvfv очень большой опыт как
+								капец!f
+							</p>
+						</div>
+						<!-- time_lessons_teacher__block END -->
+						<%}%>
+					</div>
+					<!-- section_3__wrpper-time_lessons_teacher END -->
+					<%} else if (i == 2) {%> <%for (let i = 1; i<= 3; i++){%> <%if (i ==1)
+					{%>
+					<div class="section_3__wrapper-advantages">
+						<%for (let j = 1; j <=2; j++){%> <%if (j == 1) {%>
+						<div
+							class="section_3__advantages_block section_3__advantages_block-<%=j%>"
+						>
+							<div class="section_3__advantages__button-text">
+								<div class="section_3__button-text-first">
+									<span class="section_3__text_1">Заботливые</span>
+									<span class="section_3__text_2">Учителя</span>
+								</div>
+
+								<a href="">Это кнопка какая-то</a>
+							</div>
+							<!-- section__advantages__button-text END -->
+
+							<div class="section_3__img-text">
+								<img src="/img/about-lessons_section3/2.png" alt="" />
+								<p>
+									Самый внимательный замечательный и лучший репетитор за
+									последние 1000 лет!
+								</p>
+							</div>
+						</div>
+						<!-- section__advantages_block END -->
+						<%} else {%>
+						<div
+							class="section_3__advantages_block section_3__advantages_block-<%=j%>"
+						>
+							<div class="section_3__advantages__connection">
+								<h4 style="<%if (j == 2){%>color:#fff;<%}%>">
+									Всегда на связи
+								</h4>
+								<p>
+									Круто же, когда человек, с которым ты занимаешься, всегда
+									отвечает во время
+								</p>
+								<img src="/img/about-lessons_section3/<%=j%>.png" alt="" />
+							</div>
+						</div>
+
+						<%} %> <%}%>
+					</div>
+
+					<div class="section_3__wrapper-advantages">
+						<%for (let i = 3; i<= 4; i++){%>
+						<div
+							class="section_3__advantages_block section_3__advantages_block-<%-i%>"
+						>
+							<div class="section_3__advantages__circeficate-live_lessons">
+								<%if (i == 3) {%>
+								<div>
+									<h5>Государственный аттестат</h5>
+									<p class="section_3__advantages__p-first">
+										Опять же, тут будет какая-нибудь информация, которая
+										соотносится с заголовком Государственный аттестат
+									</p>
+								</div>
+
+								<img src="/img/about-lessons_section1/1.png" alt="" />
+
+								<%} else {%>
+								<div class="section_3__advantages__underheadline">
+									<h5>Живые миниуроки</h5>
+									<div class="section_3__advantages__wrapper_count-p">
+										<div>
+											<span>24</span>
+											<p class="section_3__advantages__p-last">Младшей школы</p>
+										</div>
+
+										<div>
+											<span>234</span>
+											<p class="section_3__advantages__p-last">Старшей школы</p>
+										</div>
+									</div>
+								</div>
+								<img src="/img/about-lessons_section1/1.png" alt="" />
+
+								<%}%>
+							</div>
+						</div>
+						<%}%>
+					</div>
+
+					<!-- section_3__wrapper-advantages END -->
+					<%} %> <%}%> <%}%>
+				</div>
+				<!-- section_3__row END -->
+				<%}%>
+			</div>
+		</section>
+		<!-- section_3 END-->
+
+		<%- include ('blocks/footer') %>
+		<script src="/scripts/about_lessons.js"></script>
+	</body>
+</html>
